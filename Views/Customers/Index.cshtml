@@ -17,6 +17,7 @@ else
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Name</th>
+                <th scope="col">Discount</th>
             </tr>
         </thead>
         <tbody>
@@ -25,6 +26,7 @@ else
                 <tr>
                     <th>@customer.Id</th>
                     <td>@Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.Id }, null)</td>
+                    <td>@customer.MembershipType.DiscountRate%</td>
                 </tr>
             }
         </tbody>
